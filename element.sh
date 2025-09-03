@@ -5,7 +5,7 @@ if [[ -z $1 ]]; then
   exit
 fi
 
-PSQL="psql -X --username=freecodecamp --dbname=periodic_table --tuples-only -c"
+PSQL="psql -X --username=freecodecamp --dbname=periodic_table -t --no-align -c""
 
 if [[ $1 =~ ^[0-9]+$ ]]; then
   CONDITION="atomic_number=$1"
